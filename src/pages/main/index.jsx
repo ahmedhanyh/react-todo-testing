@@ -26,7 +26,13 @@ function Main() {
     return (
         <>
             <input type="text" placeholder="Enter a new task" id='taskInput' />
-            <button type='submit' onClick={ addTodo(`Todo Item ${todoId}`) }>
+            <button type='submit' onClick={
+                () => {
+                    const todoItem = document.querySelector("#taskInput").value;
+                    if (!todoItem) return alert("You must specify a task!");
+                    addTodo(todoItem);
+                }
+            }>
                 Add
             </button>
             <ul>
