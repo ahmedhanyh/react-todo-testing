@@ -1,3 +1,8 @@
+.todo-item {
+    padding: 24px 0 ;
+    border-bottom: 1px solid rgb(57, 57, 57);
+}
+
 .btn {
     box-sizing: border-box;
     margin-right: 12px;
