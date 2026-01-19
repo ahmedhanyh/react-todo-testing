@@ -40,13 +40,19 @@ function Main() {
                     Add
                 </button>
             </div>
-            <ul>
-                {todoItems.length == 0 ? <p>No todos yet.</p>
-                    : todoItems.map(todoItem => {
-                        return <TodoItem key={todoItem["id"]} todo={todoItem} onDeleteTodo={deleteTodo} onMarkAsDone={markAsDone} />;
-                    }
-                    )}
-            </ul>
+            <div className="todos-container">
+            {todoItems.length == 0 ? <p className='todos-title'>No todos yet.</p>
+                :
+                <div className="todos-list-container">
+                    <p className="todos-title">Let's get some work done!</p>
+                    <ul className="todos-list">
+                        {todoItems.map(todoItem => {
+                            return <TodoItem key={todoItem["id"]} todo={todoItem} onDeleteTodo={deleteTodo} onMarkAsDone={markAsDone} />;
+                        })}
+                    </ul>
+                </div>
+            }
+            </div>
         </>
     );
 }
