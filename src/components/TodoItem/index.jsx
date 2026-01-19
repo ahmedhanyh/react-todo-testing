@@ -1,6 +1,8 @@
+import './TodoItem.css';
+
 function TodoItem(props) {
     return (
-        <li>
+        <li className="todo-item">
             <button onClick={() => props.onMarkAsDone(props.todo["id"])}>Complete</button>
             <button onClick={() => props.onDeleteTodo(props.todo["id"])}>Delete</button>
             <span>
