@@ -18,9 +18,9 @@ function Main() {
         setTodoItems(filteredTodoItems);
     };
 
-    const markAsDone = (id) => {
+    const toggleMarkAsDone = (id) => {
         const completedTodoItem = todoItems.find(todoItem => todoItem["id"] == id);
-        completedTodoItem["done"] = true;
+        completedTodoItem["done"] = !completedTodoItem["done"];
         setTodoItems([...todoItems]);
     };
 
@@ -47,7 +47,7 @@ function Main() {
                     <p className="todos-title">Let's get some work done!</p>
                     <ul className="todos-list">
                         {todoItems.map(todoItem => {
-                            return <TodoItem key={todoItem["id"]} todo={todoItem} onDeleteTodo={deleteTodo} onMarkAsDone={markAsDone} />;
+                            return <TodoItem key={todoItem["id"]} todo={todoItem} onDeleteTodo={deleteTodo} onMarkAsDone={toggleMarkAsDone} />;
                         })}
                     </ul>
                 </div>

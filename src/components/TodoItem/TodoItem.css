@@ -1,4 +1,9 @@
-.todo-item button {
+.btn {
+    box-sizing: border-box;
     margin-right: 12px;
     padding: 4px 8px;
+}
+
+.btn.done-btn {
+    min-width: 86px;
 }
