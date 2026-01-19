@@ -32,9 +32,10 @@ function Main() {
                 <input type="text" placeholder="Enter a new task" id='taskInput' />
                 <button className='add-btn' type='submit' onClick={
                     () => {
-                        const todoItem = document.querySelector("#taskInput").value;
-                        if (!todoItem) return alert("You must specify a task!");
-                        addTodo(todoItem);
+                        let todoItem = document.querySelector("#taskInput");
+                        if (!todoItem.value) return alert("You must specify a task!");
+                        addTodo(todoItem.value);
+                        todoItem.value = "";
                     }
                 }>
                     Add
