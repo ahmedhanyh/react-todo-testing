@@ -25,7 +25,7 @@ function Main() {
     };
 
     return (
-        <>
+        <main className="main">
             <div className="main-container">
                 <h1 className='main-heading'>To-Do App!</h1>
                 <label htmlFor="taskInput">Add New To-Do</label>
@@ -54,7 +54,7 @@ function Main() {
                 </div>
             }
             </div>
-        </>
+        </main>
     );
 }
 
